@@ -1,28 +1,16 @@
-const express = require("express");
+import {createRequire} from "module"
+const require = createRequire(import.meta.url)
+const data = require('../data/test.json')
 
-const app = express();
 
-//!get info
-app.get("/api/shop", (req, res) => {
 
-})
+export const apiTest = (app) => {
 
-//!create
-app.post("/api/shop/:id", (req, res) =>{
+    app.get("/api/shop/data", (req, res) => {
+        return (
+            res.json(data.products)
+        )
+    })
 
-})
 
-//!replace
-app.put("/api/shop/:id", (req, res) =>{
-
-})
-
-//!replace
-app.put("/api/shop/:id", (req, res) =>{
-
-})
-
-//!delete
-app.delete("/api/shop/:id", (req, res) =>{
-
-})
+}
