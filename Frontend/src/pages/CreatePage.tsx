@@ -1,13 +1,20 @@
+import axios from "axios"
+import { useState } from "react"
+import React from "react"
 
 
-
-const createApi = () =>{
-    
-}
 const CreatePage = () => {
+    const [data, setData] = React.useState()
 
 
-    return(
 
+    return (
+        <div>
+            <button>
+                dsa
+            </button>
+        </div>
     )
 }
+
+export default CreatePage
