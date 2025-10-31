@@ -3,12 +3,20 @@ import { useNavigate } from "react-router-dom"
 import axios from "axios"
 
 const MainPage = () => {
-const navigate = useNavigate()
+    const navigate = useNavigate()
 
     return (
         <div>
-            sagsa
-            <button onClick={() => navigate("/About")}>sagas</button>
+            <button onClick={() => navigate("/")}>Main</button>
+            <button onClick={() => navigate("/About")}>About</button>
+            <button onClick={() => navigate("/Create")}>Create</button>
+            
+
+            <div>
+                <button onClick={() => navigate("/Product/:id")}>Product</button>
+            </div>
+
+
         </div>
     )
 }

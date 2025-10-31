@@ -18,7 +18,7 @@ app.use(express(express.json()))
 
 apiTest(app)
 
-app.get("/api/shop", (req, res) =>
+app.get("/shop", (req, res) =>
 {
     res.json({message: "data from backend"})
 })
